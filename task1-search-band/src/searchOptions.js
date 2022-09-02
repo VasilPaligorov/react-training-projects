@@ -9,14 +9,14 @@ export default function SearchOptions() {
 
     useEffect(() => {
         console.log(1);
-        setIntervalId(setInterval(interval, 2000));
+        setIntervalId(setInterval(interval, 1000));
     }, []);
 
     async function LoadElements(band) {
         let data = await getData(band);
         clearInterval(intervalId);
         setElements([...initElements, ...data]);
-        setIntervalId(setInterval(interval, 2000));
+        setIntervalId(setInterval(interval, 1000));
     }
 
     function interval () {
